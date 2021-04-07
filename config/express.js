@@ -8,7 +8,7 @@ const cookieSecret = process.env.COOKIESECRET || "stancheviBrothersSuperSecret";
 module.exports = (app) => {
     // app.use(express.json());
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }))
+    app.use(bodyParser.urlencoded({ extended: false }))
     app.use(cookieParser(cookieSecret));
 
     app.use(express.static(path.resolve(__basedir, 'static')));
