@@ -16,7 +16,8 @@ dbConnector()
 		require("./config/express")(app);
 
 		app.use(apiRouter);
-		app.use(cors());
+		
+		app.use(cors()); 
 
 		app.use(errorHandler);
 
