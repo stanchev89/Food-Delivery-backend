@@ -65,7 +65,8 @@ function login(req, res, next) {
 
 			const token = utils.jwt.createToken({ id: user._id });
 
-			res.cookie(authCookieName, token, { httpOnly: true, SameSite: "None", secure: true });
+			res.cookie(authCookieName, token, { httpOnly: true});
+			// res.set('user-token',token)
 			
 			res.status(200).send(user);
 		})
