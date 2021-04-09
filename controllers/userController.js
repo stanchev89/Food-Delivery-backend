@@ -130,7 +130,7 @@ function getAllUsers(req, res, next) {
 }
 
 function editProfileInfo(req, res, next) {
-	const { _id: userId } = req.user || req.body;
+	const { userId } = req.user || req.body;
 	const { username, addAddress, deleteAddress, phone, email, cart, order } = req.body;
 	const update = {
 		$addToSet: {},
