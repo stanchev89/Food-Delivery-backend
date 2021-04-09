@@ -10,8 +10,8 @@ function getPosts(req, res, next) {
 function addNewPost(req, res, next) {
     if(req.user || req.body.userId) {
         const newPost = {
-            title: req.body.title,
-            description: req.body.description,
+            title: req.body.newPost.title,
+            description: req.body.newPost.description,
             likes: [],
             dislikes: [],
             author: req.user._id || req.body.userId
@@ -36,7 +36,7 @@ function addNewPost(req, res, next) {
 }
 
 function editPost (req,res,next) {
-    const post = req.body;
+    const post = req.body.post;
     const userId = req.user._id || req.body.userId;
     if(userId === post.author) {
         const update = {
