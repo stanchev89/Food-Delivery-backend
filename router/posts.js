@@ -4,7 +4,8 @@ const { auth } = require("../utils");
 const { postController } = require("../controllers");
 
 router.get('/', postController.getPosts);
-router.post('/create_post', auth(), postController.addNewPost);
-router.post('/edit_post',auth(),postController.editPost)
+router.post('/create_post', postController.addNewPost);
+router.post('/edit_post',postController.editPost);
+router.post('/delete_post',postController.deletePost)
 
 module.exports = router;
