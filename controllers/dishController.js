@@ -61,7 +61,7 @@ function removeDish(req, res, next) {
 
 function editDish(req, res, next) {
     const id = req.params.id;
-    const dishProps = ['name', 'products', 'meatless', 'category', 'price', 'weight', 'img', 'options', 'daily_menu']
+    const dishProps = ['name', 'products', 'meatless', 'category', 'price', 'weight', 'img', 'options','selected_options', 'daily_menu']
     const update = {
         $addToSet: {},
         $push: {},

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {userController} = require("../controllers");
-const {userModel} = require("../models");
+const {userModel,orderModel} = require("../models");
 const {auth} = require("../utils");
 const validator = require("../validators");
 
@@ -28,7 +28,7 @@ router.post("/logout", userController.logout);
 
 router.get("/profile", auth(false), userController.getProfileInfo);
 
-router.put("/profile",userController.editProfileInfo);
+router.put("/profile", auth(true), userController.editProfileInfo);
 
 
 router.post('/change_password',
