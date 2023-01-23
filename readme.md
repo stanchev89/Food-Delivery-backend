@@ -1,4 +1,4 @@
-# REST-api for Angular course in SoftUni
+# REST-api for Angular Food Delivery app
 
 ## Getting started
 Let's make our first API request to the REST-api!
@@ -13,7 +13,7 @@ Here is the response we get:
 {
     "name": "rest-api",
     "version": "1.0.0",
-    "description": "REST-api for back-end of Angular course workshop in SoftUni",
+    "description": "REST-api for back-end of Angular Food Delivery App",
     "main": "index.js",
 }
 ```
